@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter U for uppercase or L for lowercase alphabet: ");
+    scanf("%c",&ch);
+    if (ch=='U' || ch=='u')
+    {
+        char s='A';
+        char arr[27];
+        for (int i=0; i<26; i++)
+        {
+            arr[i]=(s+i);
+        }
+        char *p=arr;
+        printf("Alphabet's in uppercase:\n");
+        for (int i=0; i<26; i++)
+        {
+            printf("%c ",*p++);
+        }
+    }
+    else if (ch=='L' || ch=='l')
+    {
+        char s='a';
+        char arr[27];
+        for (int i=0; i<26; i++)
+        {
+            arr[i]=(s+i);
+        }
+        char *p=arr;
+        printf("Alphabet's in lowercase:\n");
+        for (int i=0; i<26; i++)
+        {
+            printf("%c ",*p++);
+        }
+    }
+    else
+        printf("Wrong Entry\n");
+    printf("\n");
+    return 0;
+}
