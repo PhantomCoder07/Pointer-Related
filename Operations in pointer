@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+    int num = 5;
+    // Initiating value in pointer
+    int *ptr = &num;
+    printf("Memory address of variable (Hexa)         : %p\n",&num);
+    printf("Memory address of pointer variable (Hexa) : %p\n",&ptr);
+    printf("Value of pointer variable (Hexa)          : %p\n",ptr);
+    printf("Memory address of variable                : %u\n",&num);
+    printf("Memory address of pointer variable        : %u\n",&ptr);
+    printf("Value of pointer variable                 : %u\n",ptr);
+    printf("Value of the variable stored in pointer   : %d\n",*ptr);
+    (*ptr)++;
+    printf("Increment value                           : %d\n",*ptr);
+    (*ptr)--;
+    printf("Decrement to main value                   : %d\n",*ptr);
+    // Initiating pointer inside a pointer
+    int **pptr = &ptr;
+    printf("Pointer's value inside a pointer          : %d\n",**pptr);
+    int arr[5] = {10,20,30,40,50};
+    // Initiating array inside a pointer
+    int *p = arr;
+    printf("First position                            : %d\n",*p);
+    // Move to next position by 1
+    p++;
+    printf("Next position by 1                        : %d\n",*p);
+    // Move back to previous position by 1
+    p--;
+    printf("Previous position by 1                    : %d\n",*p);
+    // Move position by adding value
+    p=p+3;
+    printf("Moved position by '+' Operator            : %d\n",*p);
+    // Move position by subtracting value
+    p=p-2;
+    printf("Moved position by '-' Operator            : %d\n",*p);
+    return 0;
+}
